@@ -37,7 +37,7 @@ public class ScheduledTask extends TimerTask {
         );
         Request request = new Request.Builder()
                 .url(uri)
-                .addHeader("Authorization", "Basic a03dbf63884ac97a003b4e6043027b42bc1c9646")
+                .addHeader("Authorization", "Basic a03dbf63884a003b4e6043027b42bc1c9646")
                 .post(body)
                 .build();
         Call call = client.newCall(request);
@@ -48,7 +48,6 @@ public class ScheduledTask extends TimerTask {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        System.out.println(df.format(new Date()) + ": " + response);
         if (response != null) {
             response.close();
         }
